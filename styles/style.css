@@ -10,3 +10,25 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.btn-style{
+    width: 6rem;
+    height: 3rem;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0.6rem;
+    background-color: #5c5b5a1a;
+}
+
+.btn-style:hover{
+    background-color: #5c5b5a4d;
+}
+
+.btn-color{
+    background-color: #1DD100;
+    color: white;
+}

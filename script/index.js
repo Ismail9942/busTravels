@@ -1,16 +1,18 @@
         const allBtn = document.getElementsByClassName("seat");
+        
         for(const btn of allBtn){
            
         btn.addEventListener("click", function(event){    
-    const name = event.target.innerText;
-    document.getElementsByClassName("seat").innerText=name;
+       const name = event.target.innerText;
+       document.getElementsByClassName("seat").innerText=name;
        const price = document.getElementById("ticket-price").innerText;
        const selectContainer = document.getElementById("seat-price");
 
        
        event.target.setAttribute("disabled", false);
 
-
+       
+            
 
        const div = document.createElement("div");
        div.classList.add("container-flex");
@@ -29,16 +31,16 @@
        selectContainer.appendChild(div);
 
 
-       seatCount()
-       budgetCount()
+       seatCount();
+       budgetCount();
        totalPrice(price);
-       grandTotal()
-    //    getValueById() 
-        
+       grandTotal();
+       myFunction(this, '#1DD100');
 
 
     })
 }
+
 
 
 function totalPrice (price){
@@ -72,6 +74,8 @@ function grandTotal (control){
     }
 }
 
+
+
 function seatCount (value){
     const seatCount = document.getElementById("seat-count").innerText;
     const updateSeat = parseInt(seatCount);
@@ -90,7 +94,22 @@ function budgetCount (value){
     document.querySelectorAll(".seat").innerText=updateAllBtn+1;
  }
 
-//  function getValueById(id) {
-//     const targetElement = document.getElementById(id).innerText;
-//     return parseInt(targetElement);
-//   }
+ function myFunction(element, color) {
+    element.style.backgroundColor = color;
+  }
+
+  function hideElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.add('hidden');
+}
+
+  function showElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+}
+  function play() {
+    hideElementById("main")
+    showElementById("next");
+}
+ 
+
