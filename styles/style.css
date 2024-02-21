@@ -3,3 +3,10 @@
 .font-family{
     font-family: "Raleway", sans-serif;
 }
+
+.container-flex{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
